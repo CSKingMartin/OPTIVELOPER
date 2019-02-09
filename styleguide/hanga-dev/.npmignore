@@ -1,0 +1,6 @@
+.cache
+.next
+.DS_Store
+tmp
+example
+lib

@@ -1,0 +1,95 @@
+import { Specimen, PropTable, Presets, Editor } from 'hanga'
+import Button from './Button.jsx'
+
+# Button
+
+This is a button that can be used for interactivity or linking.
+
+## Examples
+
+<Presets
+  defaultProps={{
+    href: '',
+    fullWidth: false,
+    size: 'default',
+    theme: 'passive',
+    children: 'Commodo fugiat nulla sit officia'
+  }}
+>
+  <Presets.Option
+    name="Basic Button"
+    props={{
+      children: 'This is a basic button'
+    }}
+  />
+  <Presets.Option
+    name="Large Positive Button"
+    props={{
+      size: 'large',
+      theme: 'positive',
+      children: 'This is a large positive button'
+    }}
+  />
+  <Presets.Option
+    name="Small Negative Button"
+    props={{
+      size: 'small',
+      theme: 'negative',
+      children: 'This is a small negative button'
+    }}
+  />
+  <Presets.Option
+    name="Full Width Button Link"
+    props={{
+      href: '#wow',
+      fullWidth: true,
+      children: 'This is a wide button that acts as a link'
+    }}
+  />
+</Presets>
+
+<Specimen
+  Head={() => <link rel="stylesheet" href="/_next/static/style.css" />}
+>
+  {
+    ({ href, fullWidth, size, theme, children }) =>
+      <Button
+        href={href}
+        fullWidth={fullWidth}
+        size={size}
+        theme={theme}
+      >
+        {children}
+      </Button>
+  }
+</Specimen>
+
+<PropTable>
+  <PropTable.Row
+    name="size"
+    description="Changes the padding and font size of the button"
+    options={['default', 'small', 'large']}
+    defaultValue="default"
+  />
+  <PropTable.Row
+    name="theme"
+    description="Indicates the purpose of the button"
+    options={['passive', 'positive', 'negative']}
+    defaultValue="passive"
+  />
+  <PropTable.Row
+    name="fullWidth"
+    description="Allows the button to grow to the width of its container"
+    defaultValue={false}
+  />
+  <PropTable.Row
+    name="href"
+    description="Optional – Add when button should act as a traditional link"
+    defaultValue=""
+  />
+  <PropTable.Row
+    name="children"
+    description="Inner content of the button"
+    defaultValue="Aliqua tempor labore minim fugiat ipsum"
+  />
+</PropTable>
