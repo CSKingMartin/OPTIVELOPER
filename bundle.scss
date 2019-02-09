@@ -1,0 +1,11 @@
+:root {
+  --color-primary: blue;
+}
+
+button {
+  color: var(--color-primary);
+
+  &.is-special {
+    color: red;
+  }
+}
