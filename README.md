@@ -1,4 +1,4 @@
-# OPTIVELOPER
+# optiveloper
 
 Ideas for URLS:
 - optimi.sm
