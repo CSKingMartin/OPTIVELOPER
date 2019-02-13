@@ -1,0 +1,146 @@
+:global {
+  * { box-sizing: border-box; }
+
+  html,body {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+  }
+}
+
+.layoutViewer {
+  padding: 1em;
+
+  @media (width > 960px) {
+    padding: 2em;
+  }
+
+  & > div > * {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    color: blue;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+    border-collapse: collapse;
+
+    code {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #eee;
+      display: inline-block;
+      font-size: 1.1em;
+      padding: 0.25em 0.5em;
+    }
+  }
+
+  tbody > tr {
+    &:nth-child(2n+1) {
+      background-color: #f6f6f6;
+    }
+  }
+
+  td {
+    padding: 0.5em;
+  }
+
+  th {
+    text-align: left;
+    font-size: 0.8em;
+    padding: 0.625em;
+    text-transform: uppercase;
+  }
+
+  [data-specimen] {
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+  }
+
+  [data-editor-select],
+  [data-specimen] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  [data-editor-toggle-wrapper],
+  [data-editor-select],
+  [data-editor-toggle] + * {
+    margin-left: auto;
+  }
+}
+
+.overtake {
+  position: fixed;
+  height: calc(100vh - 4rem);
+  top: 4rem;
+  transition: background-color 0.25s;
+  width: 100vw;
+  z-index: -1;
+}
+
+.overtakeActive {
+  background-color: #ededed80;
+  z-index: 15;
+}
+
+.shell + * {
+  margin-top: 4rem;
+}
+
+.header {
+  background-color: #efefef;
+  border-bottom: 1px solid #5e5e5e;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  text-transform: uppercase;
+  width: 100%;
+
+  & > * {
+    display: inline-block;
+  }
+}
+
+.nav {
+  background-color: white;
+  border-right: 1px solid #5e5e5e;
+  height: 100vh;
+  position: fixed;
+  top: 4rem;
+  transform: translateX(-12rem);
+  transition: transform 0.25s;
+  width: 12rem;
+  z-index: 20;
+}
+
+.navOpen {
+  transform: translateX(0);
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 3rem;
+  margin: 0.5rem 1.5rem 0.5rem 0.5rem;
+  width: 3rem;
+  z-index: 10;
+
+  span {
+    background-color: black;
+    border-radius: 2px;
+    display: block;
+    margin: auto;
+    height: 3px;
+    margin-bottom: 2px;
+    width: 1.5rem;
+  }
+}

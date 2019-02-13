@@ -5,5 +5,11 @@ export default () =>
   <div>
     <h1>Hanga Components</h1>
 
-    <li><Link href="/editor-test"><a>Editor Test</a></Link></li>
+    <ul>
+      <li><Link href="/editor-test"><a>Editor Test</a></Link></li>
+      <li><Link href="/viewer-test"><a>Viewer Test</a></Link></li>
+      <li><Link href="/specimen-test"><a>Specimen Test</a></Link></li>
+      <li><Link href="/catalog-test"><a>Catalog Test</a></Link></li>
+      <li><Link href="/global-header-test"><a>Global Header Test</a></Link></li>
+    </ul>
   </div>
