@@ -1,10 +1,9 @@
-import Button from '../components/atoms/Button/Button';
+import React from 'react'
+import Link from 'next/link'
 
-import '../bundle.scss';
-
-export default () => (
+export default () =>
   <div>
-    <div>Welcome to OPTIVELOPER</div>
-    <Button>Click me</Button>
+    <h1>Hanga Components</h1>
+
+    <li><Link href="/editor-test"><a>Editor Test</a></Link></li>
   </div>
-);

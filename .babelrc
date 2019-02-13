@@ -1,12 +1,12 @@
 {
-  "presets": ["next/babel"],
+  "presets": ["next"],
   "plugins": [
     [
       "module-resolver",
       {
         "root": ["./"],
         "alias": {
-          "hanga": "../../dist"
+          "hanga": "./styleguide/components/hanga/"
         }
       }
     ]
